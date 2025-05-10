@@ -73,15 +73,26 @@ export const MonacoEditor = ({
     }
   }, [ref, editorInstance]);
 
+  monaco.editor.defineTheme('light-custom', {
+      base: 'vs',
+      inherit: true,
+      rules: [
+          { token: 'number', foreground: '2f2f2f' }
+      ],
+      colors: {
+          'editor.foreground': '#2f2f2f'
+      }
+  });
+
   useEffect(() => {
     if (editorRef.current && isBoxReady) {
       const editor = monaco.editor.create(editorRef.current, {
         value: initialValue.current,
         language: language,
-        theme: darkMode ? 'vs-dark' : 'light',
+        theme: darkMode ? 'vs-dark' : 'light-custom',
         minimap: { enabled: false },
         renderWhitespace: 'all',
-        fontFamily: '"Migu 1M", Consolas, "Courier New", monospace',
+        fontFamily: '"Google Sans", "Helvetica Neue", sans-serif',
         renderValidationDecorations: 'off',
         showUnused: false,
         scrollBeyondLastLine: false,
