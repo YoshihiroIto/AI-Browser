@@ -100,6 +100,7 @@ export const MonacoEditor = ({
         unicodeHighlight: { allowedLocales: { _os: true, _vscode: true }, ambiguousCharacters: false },
         wordWrap: 'on',
         occurrencesHighlight: 'off',
+        lineNumbers: 'off',
         placeholder: placeholder,
       });
 
