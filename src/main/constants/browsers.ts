@@ -3,20 +3,20 @@ import { BROWSER_SCRIPTS } from '../scripts/browserScripts';
 
 export const BROWSERS: Browser[] = [
   {
-    id: 'CHATGPT',
-    label: 'ChatGPT',
-    index: 0,
-    url: 'https://chatgpt.com/',
-    urlPattern: 'chatgpt.com',
-    script: BROWSER_SCRIPTS.CHATGPT
-  },
-  {
     id: 'GEMINI',
     label: 'Gemini',
-    index: 1,
+    index: 0,
     url: 'https://gemini.google.com/',
     urlPattern: 'gemini.google.com',
     script: BROWSER_SCRIPTS.GEMINI
+  },
+  {
+    id: 'CHATGPT',
+    label: 'ChatGPT',
+    index: 1,
+    url: 'https://chatgpt.com/',
+    urlPattern: 'chatgpt.com',
+    script: BROWSER_SCRIPTS.CHATGPT
   },
   {
     id: 'AISTUDIO',
